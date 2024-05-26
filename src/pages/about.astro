@@ -2,14 +2,19 @@
 import MainLayout from "../layouts/MainLayout.astro";
 // import Mockup from "../components/Mockup.astro";
 // import Button from "../components/Button.astro";
-import Heading from "../components/Heading.astro";
+// import Heading from "../components/Heading.astro";
 // import { Image } from "astro:assets";
 // import portrait from "../images/MiriamNYC_v2T.png";
 ---
 
 <MainLayout>
-  <!-- <Heading> About </Heading> -->
-  <!-- <Mockup title="About" mockup={portrait}> -->
+  <div class="flex justify-end">
+    <div
+      class="bg-[url('/logo_cropped.png')] bg-no-repeat bg-contain bg-center p-6 flex flex-col items-center justify-center"
+    >
+      <a href="#" class="block text-2xl pt-8 hover:underline">resume</a>.
+    </div>
+  </div>
   <div class="prose prose-lg text-center mt-4 mx-auto max-w-3xl">
     <h4>Hello!</h4>
     <p>
