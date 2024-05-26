@@ -8,16 +8,16 @@ import Heading from "../components/Heading.astro";
 ---
 
 <MainLayout>
-  <Heading> About </Heading>
+  <!-- <Heading> About </Heading> -->
   <!-- <Mockup title="About" mockup={portrait}> -->
-  <div class="prose prose-lg text-center mt-4 mx-auto max-w-3xl">
+  <div class="prose text-center mt-4 mx-auto max-w-3xl">
     <!-- <p class="mb-2 font-bold">Hello!</p> -->
-    <!-- <h4>Hello!</h4> -->
+    <h4>Hello!</h4>
     <p>
-      Hello! I am an <b>independent freelance designer</b>, with a focus on
-      books and graphic novels, illustration, and graphic design. I graduated
-      with honors from the Parsons School of Design in 2023 and I’m currently
-      based in Brooklyn, New York.
+      I am an <b>independent freelance designer</b>, with a focus on books and
+      graphic novels, illustration, and graphic design. I graduated with honors
+      from the Parsons School of Design in 2023 and I’m currently based in
+      Brooklyn, New York.
     </p>
 
     <p>
@@ -43,15 +43,12 @@ import Heading from "../components/Heading.astro";
     <p>
       <b>I also have expansive experience as a Studio Assistant! </b>
     </p>
-
-    <p>
-      For inquiries please reach out at
-      <div class="text-red-800 mt-4 text-center">
-        miriamspalinski.contact@gmail.com
-      </div>
-    </p>
   </div>
 
+  <div class="mb-4 text-center">
+    <p>For inquiries please reach out at</p>
+    <div class="text-red-800">miriamspalinski.contact@gmail.com</div>
+  </div>
   <!-- <div class="flex justify-center">
     <Button href="mailto:miriamspalinski.contact@gmail.com">
       Contact me!
