@@ -18,52 +18,28 @@ import image from "../images/chick_T.png";
 ---
 
 <MainLayout>
-  <!-- <div class="grid min-h-screen place-items-center"> -->
-  <div
-    class="mx-12 p-2 gap-1 grid md:grid-rows-4 md:grid-cols-2 place-items-center border"
-  >
-    <div class="flex flex-col justify-center h-full w-full row-span-2">
-      <div class="prose prose-sm text-center">
-        <p>
-          I am a freelance graphic designer, with a focus on books, graphic
-          novels, and illustration. I strive to harness relationships between
-          type, color, image and composition to uncover purpose and meaning,
-          using dialog to build narratives into designs.
-        </p>
-      </div>
-    </div>
-    <div class="h-full w-full"></div>
-    <div class="pl-2 h-full w-full row-span-3">
-      <Image src={image} alt="main image" class="object-cover" />
-    </div>
-    <div class="h-full w-full"></div>
-    <div class="h-full w-full"></div>
-  </div>
-  <!-- </div> -->
-
-  <!-- <div class="mt-8 gap-8 grid md:grid-cols-2 place-items-center">
-    <div class="md:order-2 flex justify-center">
+  <div class="relative">
+    <div class="flex justify-center pt-12">
       <Image
-        src={image}
-        alt="main image"
-        class="object-cover w-4/6 sm:w-3/6 md:w-4/5"
+        src={logo}
+        alt="Background Image"
+        class="absolute max-h-[360px] w-auto z-0"
       />
     </div>
-    <div class="flex flex-col justify-center items-center">
-      <h1 class="text-center font-bold text-3xl mb-4">
-        Book Design and Illustration
-      </h1>
-      <div class="prose prose-sm text-center">
-        <p>
-          I am a freelance graphic designer, with a focus on books, graphic
-          novels, and illustration. I strive to harness relationships between
-          type, color, image and composition to uncover purpose and meaning,
-          using dialog to build narratives into designs.
-        </p>
+    <div class="mx-12 gap-1 grid md:grid-cols-2 place-items-center">
+      <div class="z-10 h-full w-4/6">
+        <div class="prose prose-sm prose-narrow text-center">
+          <p>
+            I am a freelance graphic designer, with a focus on books, graphic
+            novels, and illustration. I strive to harness relationships between
+            type, color, image and composition to uncover purpose and meaning,
+            using dialog to build narratives into designs!
+          </p>
+        </div>
       </div>
-      <Button href="mailto:miriamspalinski.contact@gmail.com">
-        Contact me!
-      </Button>
+      <div class="pl-2 pt-4 z-10 h-full w-full">
+        <Image src={image} alt="main image" class="object-cover" />
+      </div>
     </div>
-  </div> -->
+  </div>
 </MainLayout>

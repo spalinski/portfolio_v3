@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      // maxWidth: {
+      //   "prose-narrow": "20ch",
+      // },
       fontFamily: {
         jost: ["Jost", "sans-serif"],
       },
@@ -21,12 +24,12 @@ export default {
         900: "900",
       },
       colors: {
-        "msky": "#E2EBFE",
-        "mred": "#DD466F",
-        "msun": "#FDFAEF",
+        msky: "#E2EBFE",
+        mred: "#DD466F",
+        msun: "#FDFAEF",
       },
     },
-},
+  },
   plugins: [require("flowbite/plugin"), require("@tailwindcss/typography")],
   // darkMode: "class",
 };

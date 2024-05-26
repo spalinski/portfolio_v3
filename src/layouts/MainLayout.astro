@@ -23,9 +23,7 @@ import logo from "../images/logo_cropped.png";
   </head>
   <body class="font-jost text-slate-800 bg-msky">
     <div class="max-w-[1600px] mx-auto min-h-screen">
-      <div
-        class="flex flex-col justify-center w-full h-full pt-6 px-8 lg:px-12"
-      >
+      <div class="flex flex-col pt-6 px-8 lg:px-12">
         <div class="relative">
           <Image
             src={logo}
@@ -49,20 +47,24 @@ import logo from "../images/logo_cropped.png";
             ]}
           />
         </div>
-        <section class="mt-2 px-0 mx-auto">
+        <!-- <main class="flex-grow mt-2 px-0 mx-auto"> -->
+        <main class="flex-grow">
           <slot />
-        </section>
+        </main>
 
-        <!-- <div class="relative"> -->
-        <!-- <Footer class="absolute top-0 left-0 right-0" /> -->
-        <Footer />
-        <div class="flex justify-center">
-          <Image src={logo} alt="Background Image" class="h-16 w-auto" />
+        <div class="relative">
+          <!-- <Footer class="absolute top-0 left-0 right-0" /> -->
+          <Footer />
+          <div class="absolute inset-0 z-[-1] translate-y-4">
+            <Image
+              src={logo}
+              alt="Background Image"
+              class="h-16 object-center object-contain"
+            />
+          </div>
         </div>
-        <!-- </div> -->
       </div>
+      <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
     </div>
-
-    <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
   </body>
 </html>
