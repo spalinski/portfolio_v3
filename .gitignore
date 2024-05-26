@@ -3,6 +3,7 @@ portfolio/
 # generated types
 .astro/
 
+public
 src/images
 
 # dependencies
