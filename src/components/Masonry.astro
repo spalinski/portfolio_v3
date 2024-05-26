@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+const { images, columns } = Astro.props;
+
+const total = images.length;
+---
+
+<div class="w-full">
+  <div
+    class="columns-1 gap-1 sm:columns-2 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-1 lg:[&>img:not(:first-child)]:mt-1"
+  >
+    {
+      images.map((im) => (
+        <Image src={im.default} class="border-2 " alt="image" />
+      ))
+    }
+  </div>
+</div>

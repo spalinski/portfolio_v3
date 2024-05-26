@@ -1,0 +1,44 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+// import Masonry from "../components/Masonry.astro";
+
+import Heading from "../../components/Heading.astro";
+import { Image } from "astro:assets";
+import m3 from "../../images/art2024/mother3/mother3_cover.png";
+import mockup from "../../images/art2024/funkiest-animal/mock-ups/funkyanimals_mockup.png";
+
+// const images = await Astro.glob(
+//   "../images/art2024/illustration/*.{jpg,jpeg,png,webp}"
+// );
+---
+
+<MainLayout>
+  <Heading> Illustration </Heading>
+  <div
+    class="grid grid-cols-1 md:gap-2 md:grid-cols-2 items-center justify-between"
+  >
+    <div>
+      <a href="funky-animals">
+        <Image
+          src={mockup}
+          alt="main image"
+          class="w-full h-full object-cover"
+        />
+      </a>
+    </div>
+    <div>
+      <a href="mother3">
+        <Image src={m3} alt="main image" class="h-full w-full object-cover" />
+      </a>
+    </div>
+    <!-- <div>
+      <a href="funky-animals">
+        <Image
+          src={mockup}
+          alt="main image"
+          class="w-full h-full object-cover"
+        />
+      </a>
+    </div> -->
+  </div>
+</MainLayout>

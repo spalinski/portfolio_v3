@@ -1,0 +1,26 @@
+---
+import Heading from "./Heading.astro";
+import { Image } from "astro:assets";
+const { title, mockup } = Astro.props;
+---
+
+<div>
+  <Heading>
+    {title}
+  </Heading>
+  <!-- <h1 class="mb-6 font-raleway text-2xl font-semibold text-center">
+    {title}
+  </h1> -->
+  <!-- image first on small screens, right on larger ones -->
+  <div class="md:order-2">
+    <!-- <div class="w-full h-full object-cover md:order-2"> -->
+    <Image
+      src={mockup}
+      alt="mockup image"
+      class="object-contain max-h-[450px]"
+    />
+  </div>
+  <div class="mt-8 flex justify-center">
+    <slot />
+  </div>
+</div>

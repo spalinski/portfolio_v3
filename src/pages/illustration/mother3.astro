@@ -1,0 +1,78 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Heading from "../../components/Heading.astro";
+
+import { Image } from "astro:assets";
+const sprites = await Astro.glob(
+  "../../images/art2024/mother3/sprites/*.{jpg,jpeg,png,webp}"
+);
+const images = await Astro.glob(
+  "../../images/art2024/mother3/my_art/*.{jpg,jpeg,png,webp}"
+);
+---
+
+<MainLayout>
+  <Heading> Mother 3 Enemy SpriteDex </Heading>
+  <div class="mt-2 flex items-center justify-center">
+    <div class="prose prose-lg max-w-3xl mx-auto">
+      <p>
+        The following is an ongoing project that seeks to create spot
+        illustrations and a light reimagining/redesign of the enemy characters
+        in Nintendo’s <em>Mother 3 </em> - a game so far only released in Japan and
+        part of the Earthbound franchise. Yet, despite its niche-ness it has a very
+        dedicated fanbase which I have been quietly a part of since I was 11 years
+        old. <em>Mother 3 </em> is one of my favorite games of all time for too many
+        reasons to list off, but one of the major qualities that I love is the creature
+        designs of this game! The enemy characters are beautifully varied in theme
+        and presentation and yet together create a wonderfully coherent collection
+        of characters. This game has exerted a significant influence on my aesthetic
+        preferences, and continues to do so by giving me an opportunity to explore
+        and present how I would translate these game sprites into digital spot illustrations
+        - akin to the way in which the Pokemon franchise features spot illustrations
+        for every Pokemon design. I want to honor these character designs and give
+        them new life.
+        <!-- I love this
+        game truly, and I believe these are creature designs that should see
+        more love for all the work and dedication that had been put into them. -->
+      </p>
+      <p>
+        Below are my spot illustrations; by hovering over an image you can see
+        what the original sprite!
+      </p>
+    </div>
+  </div>
+
+  <div class="mt-8 grid grid-cols-2 gap-1 sm:grid-cols-3 lg:grid-cols-4">
+    {
+      images.map((im, k) => (
+        <>
+          <div
+            data-popover
+            id={k}
+            role="tooltip"
+            class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+          >
+            <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+              <h3 class="font-semibold text-gray-900 dark:text-white">
+                The original sprite
+              </h3>
+            </div>
+
+            <div class="p-1 flex justify-center">
+              <Image
+                src={sprites[k].default}
+                alt="sprite"
+                class="object-contain h-32 w-32"
+              />
+            </div>
+
+            <div data-popper-arrow />
+          </div>
+          <div data-popover-target={k} data-popover-placement="top">
+            <Image src={images[k].default} alt="image" />
+          </div>
+        </>
+      ))
+    }
+  </div>
+</MainLayout>

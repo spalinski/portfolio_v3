@@ -1,0 +1,11 @@
+---
+const { tint, opacity } = Astro.props;
+// console.log(tint);
+---
+
+<div class="h-full w-full overflow-hidden">
+  <div class="relative">
+    <slot />
+    <div class=`absolute inset-0 ${tint} bg-opacity-${opacity}`></div>
+  </div>
+</div>

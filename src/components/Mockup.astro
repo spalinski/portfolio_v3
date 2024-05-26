@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+const { title, mockup } = Astro.props;
+---
+
+<h1 class="mb-6 font-raleway text-2xl font-semibold text-center">
+  {title}
+</h1>
+<div class="grid gap-8 md:grid-cols-2 place-items-center">
+  <!-- image first on small screens, right on larger ones -->
+  <div class="object-cover md:order-2">
+    <!-- <div class="w-full h-full object-cover md:order-2"> -->
+    <Image src={mockup} alt="mockup image" />
+  </div>
+  <div>
+    <slot />
+  </div>
+</div>

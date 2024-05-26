@@ -1,0 +1,69 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+// import Tinted from "../components/Tinted.astro";
+// import Masonry from "../components/Masonry.astro";
+// import Button from "../components/Button.astro";
+
+import { Image } from "astro:assets";
+import logo from "../images/logo_cropped.png";
+import image from "../images/chick_T.png";
+
+// import image from "../images/MiriamNYC_v2T.png";
+// import dog from "../images/art2024/illustration/01_dog.png";
+// import cat from "../images/art2024/illustration/02_cat.png";
+// import road from "../images/art2024/illustration/03_road.png";
+// const images = await Astro.glob(
+//   "../images/art2024/illustration/*.{jpg,jpeg,png,webp}"
+// );
+---
+
+<MainLayout>
+  <!-- <div class="grid min-h-screen place-items-center"> -->
+  <div
+    class="mx-12 p-2 gap-1 grid md:grid-rows-4 md:grid-cols-2 place-items-center border"
+  >
+    <div class="flex flex-col justify-center h-full w-full row-span-2">
+      <div class="prose prose-sm text-center">
+        <p>
+          I am a freelance graphic designer, with a focus on books, graphic
+          novels, and illustration. I strive to harness relationships between
+          type, color, image and composition to uncover purpose and meaning,
+          using dialog to build narratives into designs.
+        </p>
+      </div>
+    </div>
+    <div class="h-full w-full"></div>
+    <div class="pl-2 h-full w-full row-span-3">
+      <Image src={image} alt="main image" class="object-cover" />
+    </div>
+    <div class="h-full w-full"></div>
+    <div class="h-full w-full"></div>
+  </div>
+  <!-- </div> -->
+
+  <!-- <div class="mt-8 gap-8 grid md:grid-cols-2 place-items-center">
+    <div class="md:order-2 flex justify-center">
+      <Image
+        src={image}
+        alt="main image"
+        class="object-cover w-4/6 sm:w-3/6 md:w-4/5"
+      />
+    </div>
+    <div class="flex flex-col justify-center items-center">
+      <h1 class="text-center font-bold text-3xl mb-4">
+        Book Design and Illustration
+      </h1>
+      <div class="prose prose-sm text-center">
+        <p>
+          I am a freelance graphic designer, with a focus on books, graphic
+          novels, and illustration. I strive to harness relationships between
+          type, color, image and composition to uncover purpose and meaning,
+          using dialog to build narratives into designs.
+        </p>
+      </div>
+      <Button href="mailto:miriamspalinski.contact@gmail.com">
+        Contact me!
+      </Button>
+    </div>
+  </div> -->
+</MainLayout>

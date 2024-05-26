@@ -1,0 +1,50 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Mockup from "../../components/Mockup.astro";
+
+import { Image, imageConfig } from "astro:assets";
+// import cover from "../../../images/art2024/funkiest-animal/00-cover.png";
+import mockup from "../../images/art2024/funkiest-animal/mock-ups/funkyaniimals_mockup2.png";
+
+const images = await Astro.glob(
+  "../../images/art2024/funkiest-animal/*.{jpg,jpeg,png,webp}"
+);
+---
+
+<MainLayout>
+  <Mockup title="What is the funkiest animal?" mockup={mockup}>
+    <div class="prose prose-lg">
+      <p>
+        Through
+        a survey, I asked people what they thought the funkiest animal was and
+        why! The illustrations and answers are the result of this search for
+        both what the funkiest animal is, and the reasons behind why we feel
+        that an animal is “funky” in the first place.
+      </p>
+
+      <p>
+        In creating the images displayed below, I aimed for visual consistency,
+        keeping the color palette consistent with the subject matter.
+      </p>
+    </div>
+  </Mockup>
+  <!-- <Masonry images={images} /> -->
+
+  <!-- <Image src={cover} alt="FA" class="mt-8" /> -->
+
+  <!-- <div class="grid grid-row-1 gap-4 mt-8"> -->
+  <div class="flex flex-col gap-4 mt-8">
+    {
+    images.map((im,_) => (
+       <Image src={im.default} } alt="FA" class="max-h-[550px] object-contain"/>
+    ))
+    }
+  </div>
+
+  <!-- <div class="grid grid-row-1 gap-4 mt-8">
+    <Image src={fa1} alt="FA" />
+    <Image src={fa2} alt="FA" />
+    <Image src={fa3} alt="FA" />
+    <Image src={fa4} alt="FA" />
+  </div> -->
+</MainLayout>

@@ -1,0 +1,26 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import VMockup from "../../components/VMockup.astro";
+
+import { Image } from "astro:assets";
+
+import book from "../../images/art2024/covers/02-polishcats_cover.png";
+---
+
+<MainLayout>
+  <Image src={book} alt="book image" class="object-contain max-h-[450px]" />
+  <!-- <VMockup title="Polish Cats" mockup={book}>
+    <div class="prose">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facere
+        recusandae a, hic fugiat minus maxime dolorum quo temporibus consequatur
+        ducimus rerum voluptatem vitae numquam consectetur tempore in.
+        Dignissimos, deserunt quas illum sapiente labore ratione esse
+        reprehenderit consequatur ad libero necessitatibus omnis voluptatem
+        dicta doloremque nihil obcaecati modi rerum perferendis natus
+        repudiandae accusamus maiores ducimus adipisci cum. Aliquam, eligendi
+        nostrum.
+      </p>
+    </div>
+  </VMockup> -->
+</MainLayout>
