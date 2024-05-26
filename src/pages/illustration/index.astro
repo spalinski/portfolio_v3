@@ -13,14 +13,14 @@ const images = await Astro.glob(
 ---
 
 <MainLayout>
-  <div class="prose text-center mb-4 mx-auto">
+  <div class="prose prose-lg text-center mb-4 mx-auto">
     When doing personal work I like to take on projects involving series of
     images connected by a common theme. The result takes on various forms,
     ranging from collections of works to graphic novels and zines.
   </div>
   <Heading> SERIES </Heading>
   <div
-    class="mx-16 mb-8 grid grid-cols-1 md:gap-2 md:grid-cols-2 items-center justify-between"
+    class="mx-24 mt-8 mb-12 grid grid-cols-3 gap-2 items-center justify-between"
   >
     <div>
       <a href="funky-animals">
@@ -34,7 +34,21 @@ const images = await Astro.glob(
     <a href="mother3">
       <Image src={m3} alt="main image" class="h-full w-full object-cover" />
     </a>
+    <a href="mother3">
+      <Image src={m3} alt="main image" class="h-full w-full object-cover" />
+    </a>
+    <a href="mother3">
+      <Image src={m3} alt="main image" class="h-full w-full object-cover" />
+    </a>
+    <a href="mother3">
+      <Image src={m3} alt="main image" class="h-full w-full object-cover" />
+    </a>
+    <a href="mother3">
+      <Image src={m3} alt="main image" class="h-full w-full object-cover" />
+    </a>
   </div>
   <Heading> INDIVIDUAL PIECES </Heading>
-  <Masonry images={images} />
+  <div class="mt-8 mx-24">
+    <Masonry images={images} />
+  </div>
 </MainLayout>
