@@ -1,26 +1,18 @@
 ---
 import Heading from "./Heading.astro";
 import { Image } from "astro:assets";
-const { title, mockup } = Astro.props;
+const { mockup } = Astro.props;
 ---
 
 <div>
-  <Heading>
-    {title}
-  </Heading>
-  <!-- <h1 class="mb-6 font-raleway text-2xl font-semibold text-center">
-    {title}
-  </h1> -->
-  <!-- image first on small screens, right on larger ones -->
-  <div class="md:order-2">
-    <!-- <div class="w-full h-full object-cover md:order-2"> -->
+  <div>
     <Image
       src={mockup}
-      alt="mockup image"
-      class="object-contain max-h-[450px]"
+      alt=""
+      class="shadow-2xl rounded-lg object-cover w-full h-full"
     />
-  </div>
-  <div class="mt-8 flex justify-center">
-    <slot />
+    <div class="mt-6 mb-12 flex justify-center">
+      <slot />
+    </div>
   </div>
 </div>

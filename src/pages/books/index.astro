@@ -1,20 +1,31 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import Heading from "../../components/Heading.astro";
+import VMockup from "../../components/VMockup.astro";
 
 import { Image } from "astro:assets";
 
-import mockup1 from "../../images/art2024/covers/mock-ups/01_roaming_mockup.png";
-import mockup2 from "../../images/art2024/covers/mock-ups/02_polishcats_mockup.png";
-import mockup3 from "../../images/art2024/covers/mock-ups/03_bigfish_mockup.png";
-import mockup4 from "../../images/art2024/covers/mock-ups/04_forest_mockup.png";
-import mockup5 from "../../images/art2024/covers/mock-ups/05_tinythings_mockup.png";
+import mockup1 from "../../images/art2024/covers/fronts/01-roaming_cover.png";
+import mockup2 from "../../images/art2024/covers/fronts/02-polishcats_cover.png";
+import mockup3 from "../../images/art2024/covers/fronts/03-thebigfish_cover.png";
+import mockup4 from "../../images/art2024/covers/fronts/04-tinythings_cover.png";
+import mockup5 from "../../images/art2024/covers/fronts/05-forest_cover.png";
 ---
 
 <MainLayout>
-  <Heading> Book covers </Heading>
-  <div class="grid grid-cols-2">
-    <a href="roaming">
+  <!-- <Heading> Book covers </Heading> -->
+  <div class="mt-8 mb-8 mx-24 grid gap-6 grid-cols-2">
+    <div class="flex flex-col">
+      <div class="h-[200px]"></div>
+      <VMockup mockup={mockup3}> The Big Fish/Personal Work </VMockup>
+      <VMockup mockup={mockup5}> Forest/Personal Work </VMockup>
+    </div>
+    <div class="flex flex-col">
+      <VMockup mockup={mockup1}> Roaming/Personal Work </VMockup>
+      <VMockup mockup={mockup2}> Polish Cats/Personal Work </VMockup>
+      <VMockup mockup={mockup4}> Tiny Things/Personal Work </VMockup>
+    </div>
+  </div>
+  <!-- <a href="roaming">
       <Image src={mockup1} alt="main image" class="object-contain shadow-lg" />
     </a>
     <a href="polishcats">
@@ -29,5 +40,5 @@ import mockup5 from "../../images/art2024/covers/mock-ups/05_tinythings_mockup.p
     <a href="tinythings">
       <Image src={mockup5} alt="main image" class="object-contain" />
     </a>
-  </div>
+  </div> -->
 </MainLayout>
