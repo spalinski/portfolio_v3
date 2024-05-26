@@ -29,7 +29,7 @@ import logo from "../images/logo_cropped.png";
         <Image
           src={logo}
           alt="Background Image"
-          class="absolute top-0 left-0 z-0 h-16 w-auto -translate-x-4 -translate-y-2"
+          class="absolute top-0 left-0 z-0 h-16 w-auto -translate-x-4 -translate-y-8"
         />
         <Navbar
           siteName={SITE_TITLE}
@@ -52,10 +52,10 @@ import logo from "../images/logo_cropped.png";
         <slot />
       </main>
 
-      <div class="relative mb-8">
+      <div class="relative mx-auto mb-8">
         <!-- <Footer class="absolute top-0 left-0 right-0" /> -->
         <Footer />
-        <div class="absolute inset-0 z-[-1] translate-y-14">
+        <div class="absolute inset-0 z-[-1] translate-y-8">
           <Image
             src={logo}
             alt="Background Image"
