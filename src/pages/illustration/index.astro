@@ -4,8 +4,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
 
 import Heading from "../../components/Heading.astro";
 import { Image } from "astro:assets";
-import m3 from "../../images/art2024/mother3/mother3_cover.png";
-import mockup from "../../images/art2024/funkiest-animal/mock-ups/funkyanimals_mockup.png";
+import m3 from "../../images/art2024/mother3/M3Spritedex_cover2.png";
+import funky from "../../images/art2024/funkiest-animal/00-cover.png";
 
 // const images = await Astro.glob(
 //   "../images/art2024/illustration/*.{jpg,jpeg,png,webp}"
@@ -13,32 +13,27 @@ import mockup from "../../images/art2024/funkiest-animal/mock-ups/funkyanimals_m
 ---
 
 <MainLayout>
-  <Heading> Illustration </Heading>
+  <div class="prose text-center mb-4 mx-auto">
+    When doing personal work I like to take on projects involving series of
+    images connected by a common theme. The result takes on various form,
+    ranging from collections of works to graphic novels and zines.
+  </div>
+  <Heading> SERIES </Heading>
   <div
-    class="grid grid-cols-1 md:gap-2 md:grid-cols-2 items-center justify-between"
+    class="mx-16 mb-8 grid grid-cols-1 md:gap-2 md:grid-cols-2 items-center justify-between"
   >
     <div>
       <a href="funky-animals">
         <Image
-          src={mockup}
+          src={funky}
           alt="main image"
           class="w-full h-full object-cover"
         />
       </a>
     </div>
-    <div>
-      <a href="mother3">
-        <Image src={m3} alt="main image" class="h-full w-full object-cover" />
-      </a>
-    </div>
-    <!-- <div>
-      <a href="funky-animals">
-        <Image
-          src={mockup}
-          alt="main image"
-          class="w-full h-full object-cover"
-        />
-      </a>
-    </div> -->
+    <a href="mother3">
+      <Image src={m3} alt="main image" class="h-full w-full object-cover" />
+    </a>
   </div>
+  <Heading> INDIVISUAL PIECES </Heading>
 </MainLayout>
