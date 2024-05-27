@@ -1,10 +1,11 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-// import VMockup from "../../components/VMockup.astro";
-import { Image } from "astro:assets";
+import BookSpread from "../../components/BookSpread.astro";
+// import { Image } from "astro:assets";
 import book from "../../images/art2024/covers/03-thebigfish_cover.png";
 ---
 
 <MainLayout>
-  <Image src={book} alt="book image" class="object-contain max-h-[550px]" />
+  <!-- <Image src={book} alt="book image" class="mx-auto w-11/12 h-auto" /> -->
+  <BookSpread book={book} />
 </MainLayout>
