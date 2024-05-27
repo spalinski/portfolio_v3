@@ -23,28 +23,22 @@ import logo from "../images/logo_cropped.png";
   </head>
   <body class="font-jost text-slate-800 bg-msky">
     <div class="max-w-[1600px] mx-auto min-h-screen flex flex-col pt-6 px-8">
-      <div class="relative">
-        <Image
-          src={logo}
-          alt="Background Image"
-          class="absolute top-0 left-0 z-0 h-16 w-auto -translate-x-4 -translate-y-2"
-        />
-        <Navbar
-          siteName={SITE_TITLE}
-          menuItems={[
-            { tag: "books", href: "/books/" },
-            {
-              tag: "illustration",
-              href: "/illustration/",
-            },
-            { tag: "about", href: "/about/" },
-            {
-              tag: "hire me!",
-              href: "mailto:miriamspalinski.contact@gmail.com",
-            },
-          ]}
-        />
-      </div>
+      <Navbar
+        siteName={SITE_TITLE}
+        menuItems={[
+          { tag: "books", href: "/books/" },
+          {
+            tag: "illustration",
+            href: "/illustration/",
+          },
+          { tag: "about", href: "/about/" },
+          {
+            tag: "hire me!",
+            href: "mailto:miriamspalinski.contact@gmail.com",
+          },
+        ]}
+      />
+      <!-- </div> -->
       <main class="flex-grow mx-12">
         <slot />
       </main>

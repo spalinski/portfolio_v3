@@ -4,12 +4,18 @@ const { menuItems, siteName } = Astro.props;
 ---
 
 <nav class="mb-8 w-full h-full text-mred">
-  <div class="flex flex-wrap items-center justify-between mx-auto px-0 py-0">
-    <span class="self-center z-10 p-1 font-regular text-3xl whitespace-nowrap"
-      ><a href="/" class="block">
-        {siteName}
-      </a>
-    </span>
+  <div
+    class="border-2 border-rose-700 flex flex-wrap items-end justify-between mx-auto px-0 py-2"
+  >
+    <div
+      class="bg-[url('/logo_cropped.png')] w-auto bg-no-repeat bg-contain bg-end p-0"
+    >
+      <div class="self-center p-2 font-regular text-3xl whitespace-nowrap">
+        <a href="/" class="block">
+          {siteName}
+        </a>
+      </div>
+    </div>
     <button
       data-collapse-toggle="navbar-default"
       type="button"
@@ -35,7 +41,7 @@ const { menuItems, siteName } = Astro.props;
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul
-        class="font-medium text-xl flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-primary"
+        class="font-medium text-xl flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 md:items-end rtl:space-x-reverse md:mt-0 md:border-0"
       >
         {
           menuItems.map((item) => (
