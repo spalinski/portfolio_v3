@@ -13,73 +13,8 @@ import mockup5 from "../../images/art2024/covers/fronts/05-forest_cover.png";
 ---
 
 <MainLayout>
-  <!-- start pair of rows -->
-  <!-- row 1 -->
-  <div class="border-2 border-mred gap-12 grid grid-cols-2 auto-rows">
-    <div class="bg-teal-300">
-      <div
-        class="text-lg border-2 border-mred py-24 flex flex-col items-center justify-center"
-      >
-        <p>Roaming/Personal Work</p>
-        <a href="#" class="block pt-1 hover:underline"> See full spread </a>
-        <span class="material-symbols-outlined"> arrow_forward </span>
-      </div>
-    </div>
-    <div class="bg-teal-300 row-span-2">
-      <Image
-        src={mockup1}
-        alt=""
-        class="shadow-2xl rounded-lg object-contain w-full"
-      />
-    </div>
-    <!-- row 2 -->
-    <div class="bg-teal-300 row-span-2">
-      <Image
-        src={mockup3}
-        alt=""
-        class="shadow-2xl rounded-lg object-contain"
-      />
-    </div>
-    <div class="bg-teal-300">
-      <div
-        class="text-lg border-2 border-mred py-24 flex flex-col items-center justify-center"
-      >
-        <p>The Big Fish/Personal Work</p>
-        <a href="#" class="block pt-1 hover:underline"> See full spread </a>
-        <span class="material-symbols-outlined"> arrow_back </span>
-      </div>
-    </div>
-    <!-- start pair of rows -->
+  <div class="gap-12 grid grid-cols-2 auto-rows">
+    <BookPair mockup1={mockup1} mockup2={mockup3} />
     <BookPair mockup1={mockup1} mockup2={mockup3} />
   </div>
 </MainLayout>
-
-<!-- <Heading> Book covers </Heading> -->
-<div class="mt-6 mb-8 mx-16 grid gap-16 grid-cols-2">
-  <div class="flex flex-col">
-    <div class="h-[200px]"></div>
-    <VMockup mockup={mockup3}> The Big Fish/Personal Work </VMockup>
-    <VMockup mockup={mockup5}> Forest/Personal Work </VMockup>
-  </div>
-  <div class="flex flex-col">
-    <VMockup mockup={mockup1}> Roaming/Personal Work </VMockup>
-    <VMockup mockup={mockup2}> Polish Cats/Personal Work </VMockup>
-    <VMockup mockup={mockup4}> Tiny Things/Personal Work </VMockup>
-  </div>
-</div>
-<!-- <a href="roaming">
-      <Image src={mockup1} alt="main image" class="object-contain shadow-lg" />
-    </a>
-    <a href="polishcats">
-      <Image src={mockup2} alt="main image" class="object-contain" />
-    </a>
-    <a href="bigfish">
-      <Image src={mockup3} alt="main image" class="object-contain" />
-    </a>
-    <a href="forest">
-      <Image src={mockup4} alt="main image" class="object-contain" />
-    </a>
-    <a href="tinythings">
-      <Image src={mockup5} alt="main image" class="object-contain" />
-    </a>
-  </div> -->

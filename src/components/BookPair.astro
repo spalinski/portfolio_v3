@@ -4,16 +4,14 @@ import { Image } from "astro:assets";
 ---
 
 <!-- row 1 -->
-<div class="bg-teal-300">
-  <div
-    class="text-lg border-2 border-mred py-24 flex flex-col items-center justify-center"
-  >
+<div class="">
+  <div class="text-lg py-24 flex flex-col items-center justify-center">
     <p>Roaming/Personal Work</p>
     <a href="#" class="block pt-1 hover:underline"> See full spread </a>
     <span class="material-symbols-outlined"> arrow_forward </span>
   </div>
 </div>
-<div class="bg-teal-300 row-span-2">
+<div class="row-span-2">
   <Image
     src={mockup1}
     alt=""
@@ -21,13 +19,11 @@ import { Image } from "astro:assets";
   />
 </div>
 <!-- row 2 -->
-<div class="bg-teal-300 row-span-2">
+<div class="row-span-2">
   <Image src={mockup2} alt="" class="shadow-2xl rounded-lg object-contain" />
 </div>
-<div class="bg-teal-300">
-  <div
-    class="text-lg border-2 border-mred py-24 flex flex-col items-center justify-center"
-  >
+<div class="">
+  <div class="text-lg py-24 flex flex-col items-center justify-center">
     <p>The Big Fish/Personal Work</p>
     <a href="#" class="block pt-1 hover:underline"> See full spread </a>
     <span class="material-symbols-outlined"> arrow_back </span>
