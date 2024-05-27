@@ -1,31 +1,9 @@
 ---
-const { mockup1, text1, mockup2, text2 } = Astro.props;
+const { mockup1, text1, link1, mockup2, text2, link2 } = Astro.props;
+import BookRight from "./BookRight.astro";
+import BookLeft from "./BookLeft.astro";
 import { Image } from "astro:assets";
 ---
 
-<!-- row 1 -->
-<div class="">
-  <div class="text-lg py-24 flex flex-col items-center justify-center">
-    <p>Roaming/Personal Work</p>
-    <a href="#" class="block pt-1 hover:underline"> See full spread </a>
-    <span class="material-symbols-outlined"> arrow_forward </span>
-  </div>
-</div>
-<div class="row-span-2">
-  <Image
-    src={mockup1}
-    alt=""
-    class="shadow-2xl rounded-lg object-contain w-full"
-  />
-</div>
-<!-- row 2 -->
-<div class="row-span-2">
-  <Image src={mockup2} alt="" class="shadow-2xl rounded-lg object-contain" />
-</div>
-<div class="">
-  <div class="text-lg py-24 flex flex-col items-center justify-center">
-    <p>The Big Fish/Personal Work</p>
-    <a href="#" class="block pt-1 hover:underline"> See full spread </a>
-    <span class="material-symbols-outlined"> arrow_back </span>
-  </div>
-</div>
+<BookRight mockup={mockup1} text={text1} link={link1} />
+<BookLeft mockup={mockup2} text={text2} link={link2} />
