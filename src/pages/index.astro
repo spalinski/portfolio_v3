@@ -12,26 +12,22 @@ import image from "../images/chick_T.png";
 ---
 
 <MainLayout>
-  <div class="relative">
-    <div class="flex justify-center pt-4">
-      <Image
-        src={logo}
-        alt="Background Image"
-        class="absolute max-h-[360px] w-auto z-0"
-      />
-    </div>
-    <div class="mx-12 gap-1 grid md:grid-cols-2 place-items-center">
-      <div class="z-10 mt-8 h-full w-4/6">
-        <div class="prose prose-lg prose-narrow text-center">
-          <p>
-            I am a freelance graphic designer, with a focus on books, graphic
-            novels, and illustration. I strive to harness relationships between
-            type, color, image and composition to uncover purpose and meaning,
-            using dialog to build narratives into designs!
-          </p>
-        </div>
+  <div
+    class="bg-no-repeat bg-[length:60%] md:bg-[length:40%]"
+    style="background-image: url('/logo_cropped.png'); background-position: 50% 20%;"
+  >
+    <div class="mx-auto gap-4 grid md:grid-cols-2">
+      <div
+        class="justify-start md:pt-8 prose prose-lg prose-narrow text-center"
+      >
+        <p>
+          I am a freelance graphic designer, with a focus on books, graphic
+          novels, and illustration. I strive to harness relationships between
+          type, color, image and composition to uncover purpose and meaning,
+          using dialog to build narratives into designs!
+        </p>
       </div>
-      <div class="pl-2 pt-4 z-10 h-full w-full">
+      <div class="md:pt-20 justify-end">
         <Image src={image} alt="main image" class="object-cover" />
       </div>
     </div>
