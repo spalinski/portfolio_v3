@@ -26,7 +26,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../constants";
     <title>{SITE_TITLE}</title>
   </head>
   <body class="font-jost text-slate-800 bg-msky">
-    <div class="max-w-[1600px] mx-auto min-h-screen flex flex-col pt-4 px-8">
+    <div
+      class="max-w-[1600px] mx-auto min-h-screen flex flex-col pt-4 px-2 lg:px-8"
+    >
       <Navbar
         menuItems={[
           { tag: "books", href: "/books/" },
@@ -42,7 +44,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../constants";
         ]}
       />
       <!-- </div> -->
-      <main class="flex-grow mx-12">
+      <main class="flex-grow mx-2 md:mx-4 lg:mx-12">
         <slot />
       </main>
       <div class="h-8"></div>
