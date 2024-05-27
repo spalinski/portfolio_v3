@@ -1,9 +1,50 @@
 ---
 const { mockup1, text1, link1, mockup2, text2, link2 } = Astro.props;
-import BookRight from "./BookRight.astro";
-import BookLeft from "./BookLeft.astro";
+// import BookRight from "./BookRight.astro";
+// import BookLeft from "./BookLeft.astro";
 import { Image } from "astro:assets";
 ---
 
-<BookRight mockup={mockup1} text={text1} link={link1} />
-<BookLeft mockup={mockup2} text={text2} link={link2} />
+<div class="place-items-center gap-0 grid lg:grid-cols-2 lg:auto-rows">
+  <!-- row 1 -->
+  <div class="lg:row-span-2 lg:order-2">
+    <a href={link1}>
+      <Image
+        src={mockup1}
+        alt=""
+        class="shadow-2xl rounded-lg object-contain object-center max-w-[350px]"
+      />
+    </a>
+  </div>
+
+  <div
+    class="text-lg py-24 lg:order-1 flex flex-col items-center justify-center"
+  >
+    <p>{text1}</p>
+    <a href={link1} class="block pt-1 hover:underline"> See full spread </a>
+    <!-- <span class="material-symbols-outlined"> arrow_forward </span> -->
+    <span class="hidden lg:block material-symbols-outlined">
+      line_end_arrow_notch
+    </span>
+  </div>
+
+  <!-- second row -->
+  <div class="lg:row-span-2 lg:order-4 justify-self-center">
+    <a href={link2} class="block">
+      <Image
+        src={mockup2}
+        alt=""
+        class="shadow-2xl rounded-lg max-w-[350px] object-contain"
+      />
+    </a>
+  </div>
+
+  <div class="text-lg py-24 lg:order-6 flex flex-col justify-center">
+    <p>{text2}</p>
+    <a href={link2} class="block pt-1 hover:underline"> See full spread </a>
+    <!-- <span class="material-symbols-outlined"> arrow_back </span> -->
+    <span class="hidden lg:block material-symbols-outlined">
+      line_start_arrow_notch
+    </span>
+  </div>
+</div>

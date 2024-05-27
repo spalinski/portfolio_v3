@@ -3,19 +3,23 @@ const { mockup, text, link } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
-<div class="row-span-2 justify-self-center">
-  <a href={link} class="block">
-    <Image
-      src={mockup}
-      alt=""
-      class="shadow-2xl rounded-lg max-w-[350px] object-contain"
-    />
-  </a>
-</div>
+<div class="place-items-center gap-0 grid lg:grid-cols-2 lg:auto-rows">
+  <div class="lg:row-span-2 justify-self-center">
+    <a href={link} class="block">
+      <Image
+        src={mockup}
+        alt=""
+        class="shadow-2xl rounded-lg max-w-[350px] object-contain"
+      />
+    </a>
+  </div>
 
-<div class="text-lg py-24 flex flex-col justify-center">
-  <p>{text}</p>
-  <a href={link} class="block pt-1 hover:underline"> See full spread </a>
-  <!-- <span class="material-symbols-outlined"> arrow_back </span> -->
-  <span class="material-symbols-outlined"> line_start_arrow_notch </span>
+  <div class="text-lg py-24 flex flex-col justify-center">
+    <p>{text}</p>
+    <a href={link} class="block pt-1 hover:underline"> See full spread </a>
+    <!-- <span class="material-symbols-outlined"> arrow_back </span> -->
+    <span class="hidden lg:block material-symbols-outlined">
+      line_start_arrow_notch
+    </span>
+  </div>
 </div>
