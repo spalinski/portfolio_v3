@@ -7,11 +7,12 @@ import { Image } from "astro:assets";
   <a href={link}>
     <Image src={mockup} alt="" class="shadow-2xl rounded-lg object-contain" />
   </a>
-  <div class="">
-    <div class="text-lg py-24 flex flex-col items-center justify-center">
-      <p>{text}</p>
-      <a href={link} class="block pt-1 hover:underline"> See full spread </a>
-      <span class="material-symbols-outlined"> arrow_back </span>
-    </div>
+</div>
+<div class="">
+  <div class="text-lg py-24 flex flex-col items-center justify-center">
+    <p>{text}</p>
+    <a href={link} class="block pt-1 hover:underline"> See full spread </a>
+    <!-- <span class="material-symbols-outlined"> arrow_back </span> -->
+    <span class="material-symbols-outlined"> line_start_arrow_notch </span>
   </div>
 </div>
