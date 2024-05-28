@@ -33,7 +33,7 @@ const images = await Astro.glob(
   <!-- <Image src={cover} alt="FA" class="mt-8" /> -->
 
   <!-- <div class="grid grid-row-1 gap-4 mt-8"> -->
-  <div class="flex flex-col gap-4 mt-8">
+  <div class="flex flex-col gap-4 mt-12">
     {
     images.map((im,_) => (
        <Image src={im.default} } alt="FA" class="max-h-[550px] object-contain"/>
