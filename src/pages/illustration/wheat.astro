@@ -1,0 +1,18 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Masonry from "../../components/Masonry.astro";
+
+import Heading from "../../components/Heading.astro";
+import { Image } from "astro:assets";
+
+const images = await Astro.glob(
+  "../../images/art2024/comics/the-wheat-field/*.{jpg,jpeg,png,webp}"
+);
+---
+
+<MainLayout>
+  <Heading>THE WHEAT FIELD</Heading>
+  <div class="mt-8 mx-auto px-4 sm:px-8 lg:px-12 xl:px-24">
+    <!-- <Masonry images={images} /> -->
+  </div>
+</MainLayout>
