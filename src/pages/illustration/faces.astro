@@ -5,12 +5,25 @@ import Masonry from "../../components/Masonry.astro";
 import Heading from "../../components/Heading.astro";
 import { Image } from "astro:assets";
 
-const images = await Astro.glob("../../images/art2024/faces/*.gif");
+// const images = await Astro.glob("../../images/art2024/faces/*.gif");
+
+import otter from "../../images/art2024/faces/animalfaces_otter0001-0250.gif";
+import tiger from "../../images/art2024/faces/animalfaces_tiger0001-0250.gif";
+import lemur from "../../images/art2024/faces/animialfaces_lemur0001-0250.gif";
 ---
 
 <MainLayout>
   <div class="pb-4">
     <Heading>Animal Faces</Heading>
-    <Masonry images={images} />
+    <!-- <Masonry images={images} /> -->
+    <div class="flex justify-center">
+      <div
+        class="place-items-center grid grid-cols-[300px] md:grid-cols-[200px_200px_200px] lg:grid-cols-[300px_300px_300px] gap-2"
+      >
+        <Image src={otter} alt="" class="object-contain" />
+        <Image src={tiger} alt="" class="object-contain" />
+        <Image src={lemur} alt="" class="object-contain" />
+      </div>
+    </div>
   </div>
 </MainLayout>
