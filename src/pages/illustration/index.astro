@@ -1,10 +1,11 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import Masonry from "../../components/Masonry.astro";
-
 import Heading from "../../components/Heading.astro";
 import { Image } from "astro:assets";
+
 import m3 from "../../images/art2024/mother3/M3Spritedex_cover2.png";
+import faces from "../../images/art2024/faces/animalfacescover.png";
 import funky from "../../images/art2024/funkiest-animal/00-cover.png";
 import lonely from "../../images/art2024/lonely-landscapes/lonelylandscape_cover.png";
 import wheat from "../../images/art2024/comics/the-wheat-field/01_MiriamSpalinski_TheWheatfield_cover.png";
@@ -25,23 +26,23 @@ const individual = await Astro.glob(
   <div
     class="mx-auto px-4 sm:px-8 lg:px-12 xl:px-24 mt-8 mb-12 grid grid-cols-2 sm:grid-cols-3 gap-2 items-center justify-between"
   >
-    <a href="funky-animals">
-      <Image src={funky} alt="main image" class="w-full h-full object-cover" />
-    </a>
     <a href="mother3">
       <Image src={m3} alt="main image" class="h-full w-full object-cover" />
     </a>
+    <a href="funky-animals">
+      <Image src={funky} alt="main image" class="w-full h-full object-cover" />
+    </a>
     <a href="lonely">
       <Image src={lonely} alt="main image" class="h-full w-full object-cover" />
+    </a>
+    <a href="faces">
+      <Image src={faces} alt="main image" class="h-full w-full object-cover" />
     </a>
     <a href="wheat">
       <Image src={wheat} alt="main image" class="h-full w-full object-cover" />
     </a>
     <a href="mouse">
       <Image src={mouse} alt="main image" class="h-full w-full object-cover" />
-    </a>
-    <a href="mother3">
-      <Image src={m3} alt="main image" class="h-full w-full object-cover" />
     </a>
   </div>
   <Heading> INDIVIDUAL PIECES </Heading>
