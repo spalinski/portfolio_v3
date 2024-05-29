@@ -16,8 +16,10 @@ import image from "../images/chick2T.png";
     class="bg-no-repeat bg-[length:60%] md:bg-[length:40%]"
     style="background-image: url('/logo_cropped.png'); background-position: 50% 20%;"
   >
-    <div class="mx-auto gap-4 grid md:grid-cols-2">
-      <div class="flex justify-center md:pl-36 md:pt-8">
+    <div class="pb-8 mx-auto gap-4 grid md:grid-cols-2">
+      <!-- left grid-cell -->
+      <!-- <div class="outline flex justify-center md:pl-36 md:pt-8"> -->
+      <div class="flex justify-center items-center">
         <div class="prose max-w-[340px] lg:prose-lg prose-narrow text-center">
           <p>
             I am a graphic designer, with a focus on books, graphic novels, and
@@ -27,7 +29,8 @@ import image from "../images/chick2T.png";
           </p>
         </div>
       </div>
-      <div class="pl-8 md:pt-20">
+      <!-- right grid-cell -->
+      <div class="">
         <Image src={image} alt="main image" class="object-cover" />
       </div>
     </div>
