@@ -1,0 +1,34 @@
+---
+const { im } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<Image src={im} alt="" onclick="openLightbox(this)" class="object-contain" />
+
+<!-- Lightbox Container -->
+<div
+  id="lightbox"
+  class="fixed inset-0 z-10 hidden bg-black/85"
+  onclick="closeLightbox()"
+>
+  <div class="flex items-center justify-center">
+    <img
+      id="lightbox-image"
+      class="z-50 max-h-screen h-full w-full object-contain"
+      src=""
+      alt=""
+    />
+  </div>
+</div>
+<script is:inline>
+  function openLightbox(img) {
+    console.log(img);
+    const lightboxImage = document.getElementById("lightbox-image");
+    lightboxImage.src = img.src;
+    document.getElementById("lightbox").classList.remove("hidden");
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").classList.add("hidden");
+  }
+</script>

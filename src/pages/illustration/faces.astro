@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import Masonry from "../../components/Masonry.astro";
+import LightBox from "../../components/LightBox.astro";
 
 import Heading from "../../components/Heading.astro";
 import { Image } from "astro:assets";
@@ -23,6 +24,8 @@ import lemur from "../../images/art2024/faces/animialfaces_lemur0001-0250.gif";
         <Image src={otter} alt="" class="object-contain" />
         <Image src={tiger} alt="" class="object-contain" />
         <Image src={lemur} alt="" class="object-contain" />
+
+        <LightBox im={otter} />
       </div>
     </div>
   </div>

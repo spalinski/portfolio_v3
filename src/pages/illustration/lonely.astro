@@ -1,9 +1,10 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+import LightBox from "../../components/LightBox.astro";
 // import Masonry from "../../components/Masonry.astro";
 
 import Heading from "../../components/Heading.astro";
-import { Image } from "astro:assets";
+// import { Image } from "astro:assets";
 
 const images = await Astro.glob(
   "../../images/art2024/lonely-landscapes/??_*.{jpg,jpeg,png,webp}"
@@ -15,7 +16,8 @@ const images = await Astro.glob(
   <div class="mt-8 flex flex-col gap-2 mx-auto px-4 sm:px-8 lg:px-12 xl:px-24">
     {
       images.map((im) => (
-        <Image src={im.default} alt="" class="object-contain" />
+        <LightBox im={im.default} />
+        // <Image src={im.default} alt="" class="object-contain" />
       ))
     }
   </div>
