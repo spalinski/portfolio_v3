@@ -1,9 +1,11 @@
 ---
-const { im } = Astro.props;
+const { im, css } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
-<Image src={im} alt="" onclick="openLightbox(this)" class="object-contain" />
+<div class={css}>
+  <Image src={im} alt="" onclick="openLightbox(this)" class="object-contain" />
+</div>
 
 <!-- Lightbox Container -->
 <div
@@ -20,6 +22,7 @@ import { Image } from "astro:assets";
     />
   </div>
 </div>
+
 <script is:inline>
   function openLightbox(img) {
     console.log(img);

@@ -1,13 +1,14 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import Mockup from "../../components/Mockup.astro";
+import LightBox from "../../components/LightBox.astro";
+// import { Image, imageConfig } from "astro:assets";
+import cover from "../../images/art2024/funkiest-animal/00-cover.png";
 
-import { Image, imageConfig } from "astro:assets";
-// import cover from "../../../images/art2024/funkiest-animal/00-cover.png";
 import mockup from "../../images/art2024/funkiest-animal/mock-ups/funkyaniimals_mockup2.png";
 
 const images = await Astro.glob(
-  "../../images/art2024/funkiest-animal/*.{jpg,jpeg,png,webp}"
+  "../../images/art2024/funkiest-animal/W*.{jpg,jpeg,png,webp}"
 );
 ---
 
@@ -15,10 +16,9 @@ const images = await Astro.glob(
   <Mockup title="What is the funkiest animal?" mockup={mockup}>
     <div class="prose lg:prose-lg">
       <p>
-        Through
-        a survey, I asked people what they thought the funkiest animal was and
-        why! The illustrations and answers are the result of this search for
-        both what the funkiest animal is, and the reasons behind why we feel
+        Through a survey, I asked people what they thought the funkiest animal
+        was and why! The illustrations and answers are the result of this search
+        for both what the funkiest animal is, and the reasons behind why we feel
         that an animal is “funky” in the first place.
       </p>
 
@@ -31,20 +31,10 @@ const images = await Astro.glob(
   <!-- <Masonry images={images} /> -->
 
   <!-- <Image src={cover} alt="FA" class="mt-8" /> -->
+  <LightBox im={cover} css="mt-12 max-w-[550px] h-auto mx-auto" />
 
   <!-- <div class="grid grid-row-1 gap-4 mt-8"> -->
-  <div class="flex flex-col gap-4 mt-12">
-    {
-    images.map((im,_) => (
-       <Image src={im.default} } alt="FA" class="max-h-[550px] object-contain"/>
-    ))
-    }
+  <div class="flex flex-col gap-4 mt-4">
+    {images.map((im, _) => <LightBox im={im.default} class="max-h-[550px]" />)}
   </div>
-
-  <!-- <div class="grid grid-row-1 gap-4 mt-8">
-    <Image src={fa1} alt="FA" />
-    <Image src={fa2} alt="FA" />
-    <Image src={fa3} alt="FA" />
-    <Image src={fa4} alt="FA" />
-  </div> -->
 </MainLayout>
