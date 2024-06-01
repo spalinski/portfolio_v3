@@ -24,7 +24,8 @@ export default {
         900: "900",
       },
       colors: {
-        msky: "#E2EBFE",
+        // msky: "#E2EBFE",
+        msky: "#DFECFF",
         mred: "#DD466F",
         msun: "#FDFAEF",
       },
