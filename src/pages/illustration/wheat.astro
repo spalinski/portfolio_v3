@@ -1,18 +1,53 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import Masonry from "../../components/Masonry.astro";
+// import Masonry from "../../components/Masonry.astro";
+// import Heading from "../../components/Heading.astro";
+import Mockup from "../../components/Mockup.astro";
+import LightBox from "../../components/LightBox.astro";
 
-import Heading from "../../components/Heading.astro";
 import { Image } from "astro:assets";
 
-const images = await Astro.glob(
-  "../../images/art2024/comics/the-wheat-field/*.{jpg,jpeg,png,webp}"
-);
+import mockup from "../images/art2024/comics/the-wheat-field/smartmockups_wheatfield2.jpg";
+
+import cover from "../images/art2024/comics/the-wheat-field/01_MiriamSpalinski_TheWheatfield_cover.png";
+import p2 from "../images/art2024/comics/the-wheat-field/02_page_2.png";
+import p7 from "../images/art2024/comics/the-wheat-field/07_page_7.png";
+import p14 from "../images/art2024/comics/the-wheat-field/14_page_14.png";
+import p18 from "../images/art2024/comics/the-wheat-field/18_page_18.png";
+import p30 from "../images/art2024/comics/the-wheat-field/30_page_30.png";
+import p38 from "../images/art2024/comics/the-wheat-field/38_page_38.png";
+
+// const images = await Astro.glob(
+//   "../../images/art2024/comics/the-wheat-field/*.{jpg,jpeg,png,webp}"
+// );
 ---
 
 <MainLayout>
-  <Heading>THE WHEAT FIELD</Heading>
-  <div class="mt-8 mx-auto px-4 sm:px-8 lg:px-12 xl:px-24">
-    <!-- <Masonry images={images} /> -->
+  <Mockup title="The Wheat Field" mockup={mockup}>
+    <div class="prose lg:prose-lg">
+      <p>
+        "The Wheat Field" is an autobiographical 42-page graphic novel about my
+        experiences while processing the grief of my grandparents passing. In
+        an attempt to reclaim some closeness to my grandmother, I go on an
+        investigation into the hidden family history that she had been entrusted
+        with shortly before her death.
+      </p>
+
+      <p>
+        Below are excerpts form the graphic novel, if interested in reading more
+        please reach out! I also sell single print editions of the full book -
+        for all inquiries please reach out at miriamshbooks@gmail.com.
+      </p>
+    </div>
+  </Mockup>
+  <LightBox im={cover} css="mt-12 max-w-[550px] h-auto mx-auto" />
+  <div class="flex flex-col gap-4 mt-4">
+    <!-- <LightBox im={p1} class="max-h-[550px]" /> -->
+    <LightBox im={p2} class="max-h-[550px]" />
+    <LightBox im={p7} class="max-h-[550px]" />
+    <LightBox im={p14} class="max-h-[550px]" />
+    <LightBox im={p18} class="max-h-[550px]" />
+    <LightBox im={p30} class="max-h-[550px]" />
+    <LightBox im={p38} class="max-h-[550px]" />
   </div>
 </MainLayout>
