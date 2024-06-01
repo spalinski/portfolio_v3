@@ -1,0 +1,50 @@
+---
+const { im, css } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<light-box>
+  <div class={css}>
+    <!-- <Image src={im} alt="" onclick="openLightbox(this)" class="object-contain" /> -->
+    <Image src={im} alt="" id="image" class="object-contain" />
+  </div>
+</light-box>
+
+<!-- Lightbox Container -->
+<!-- onclick="closeLightbox()" -->
+<div id="lightbox" class="fixed inset-0 z-10 hidden bg-black/85">
+  <div class="flex items-center justify-center">
+    <img
+      id="lightbox-image"
+      class="z-50 max-h-screen h-full w-full object-contain"
+      src=""
+      alt=""
+    />
+  </div>
+</div>
+
+<script>
+  class LightBox extends HTMLElement {
+    constructor() {
+      super();
+      // let count = 0;
+
+      // const heartButton = this.querySelector('button');
+      // const countSpan = this.querySelector('span');
+
+      const image = this.getElementById("image");
+      const lightbox = this.getElementById("lightbox");
+      const lightboxImage = this.getElementById("lightbox-image");
+
+      image.addEventListener("click", () => {
+        lightboxImage.src = image.src;
+        lightbox.classList.remove("hidden");
+      });
+
+      lightbox.addEventListener("click", () => {
+        lightbox.classList.add("hidden");
+      });
+    }
+  }
+  customElements.define("light-box", LightBox);
+</script>

@@ -1,15 +1,17 @@
 ---
 const { im, css } = Astro.props;
 import { Image } from "astro:assets";
+
+import { nanoid } from "nanoid";
+
+let imId;
 ---
 
 <div class={css}>
-  <!-- <Image src={im} alt="" onclick="openLightbox(this)" class="object-contain" /> -->
-  <Image src={im} alt="" id="image" class="object-contain" />
+  <Image src={im} alt="" id={(imId = nanoid())} class="object-contain" />
 </div>
 
 <!-- Lightbox Container -->
-<!-- onclick="closeLightbox()" -->
 <div id="lightbox" class="fixed inset-0 z-10 hidden bg-black/85">
   <div class="flex items-center justify-center">
     <img
@@ -21,8 +23,8 @@ import { Image } from "astro:assets";
   </div>
 </div>
 
-<script>
-  const image = document.getElementById("image");
+<script define:vars={{ imId }}>
+  const image = document.getElementById(imId);
   const lightbox = document.getElementById("lightbox");
   const lightboxImage = document.getElementById("lightbox-image");
 
