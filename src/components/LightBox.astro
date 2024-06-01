@@ -4,15 +4,13 @@ import { Image } from "astro:assets";
 ---
 
 <div class={css}>
-  <Image src={im} alt="" onclick="openLightbox(this)" class="object-contain" />
+  <!-- <Image src={im} alt="" onclick="openLightbox(this)" class="object-contain" /> -->
+  <Image src={im} alt="" id="image" class="object-contain" />
 </div>
 
 <!-- Lightbox Container -->
-<div
-  id="lightbox"
-  class="fixed inset-0 z-10 hidden bg-black/85"
-  onclick="closeLightbox()"
->
+<!-- onclick="closeLightbox()" -->
+<div id="lightbox" class="fixed inset-0 z-10 hidden bg-black/85">
   <div class="flex items-center justify-center">
     <img
       id="lightbox-image"
@@ -23,15 +21,20 @@ import { Image } from "astro:assets";
   </div>
 </div>
 
-<script is:inline>
-  function openLightbox(img) {
-    console.log(img);
-    const lightboxImage = document.getElementById("lightbox-image");
-    lightboxImage.src = img.src;
-    document.getElementById("lightbox").classList.remove("hidden");
+<script>
+  const image = document.getElementById("image");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+
+  image.addEventListener("click", () => openLightbox());
+  lightbox.addEventListener("click", () => closeLightbox());
+
+  function openLightbox() {
+    lightboxImage.src = image.src;
+    lightbox.classList.remove("hidden");
   }
 
   function closeLightbox() {
-    document.getElementById("lightbox").classList.add("hidden");
+    lightbox.classList.add("hidden");
   }
 </script>
