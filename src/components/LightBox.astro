@@ -2,14 +2,14 @@
 const { im, css } = Astro.props;
 import { Image } from "astro:assets";
 
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 
-let imId;
+// let imId;
 ---
 
-<div class={css}>
-  <Image src={im} alt="" id={(imId = nanoid())} class="object-contain" />
-</div>
+<light-box data-css={css} data-im={im}>
+  <Image src={im} alt="" class="object-contain" />
+</light-box>
 
 <!-- Lightbox Container -->
 <div id="lightbox" class="fixed inset-0 z-10 hidden bg-black/85">
@@ -23,17 +23,31 @@ let imId;
   </div>
 </div>
 
-<script define:vars={{ imId }}>
-  const image = document.getElementById(imId);
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImage = document.getElementById("lightbox-image");
+<script>
+  class LightBox extends HTMLElement {
+    constructor() {
+      super();
 
-  image.addEventListener("click", () => {
-    lightboxImage.src = image.src;
-    lightbox.classList.remove("hidden");
-  });
+      const im = this.dataset.im;
+      const css = this.dataset.css;
+      // console.log(image);
+      // console.log(css);
 
-  lightbox.addEventListener("click", () => {
-    lightbox.classList.add("hidden");
-  });
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightbox-image");
+      const image = this.querySelector("Image");
+      console.log(image);
+
+      image.addEventListener("click", () => {
+        lightboxImage.src = im.src;
+        lightbox.classList.remove("hidden");
+      });
+
+      lightbox.addEventListener("click", () => {
+        lightbox.classList.add("hidden");
+      });
+    }
+  }
+
+  customElements.define("light-box", LightBox);
 </script>
