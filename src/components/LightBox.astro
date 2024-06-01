@@ -28,15 +28,12 @@ let imId;
   const lightbox = document.getElementById("lightbox");
   const lightboxImage = document.getElementById("lightbox-image");
 
-  image.addEventListener("click", () => openLightbox());
-  lightbox.addEventListener("click", () => closeLightbox());
-
-  function openLightbox() {
+  image.addEventListener("click", () => {
     lightboxImage.src = image.src;
     lightbox.classList.remove("hidden");
-  }
+  });
 
-  function closeLightbox() {
+  lightbox.addEventListener("click", () => {
     lightbox.classList.add("hidden");
-  }
+  });
 </script>
