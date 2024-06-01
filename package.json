@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.9.1",
+    "astro": "^4.9.2",
     "flowbite": "^2.3.0",
     "nanoid": "^5.0.7",
     "sharp": "^0.33.4",
