@@ -5,17 +5,16 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import Mockup from "../../components/Mockup.astro";
 import LightBox from "../../components/LightBox.astro";
 
-import { Image } from "astro:assets";
+// import { Image } from "astro:assets";
 
-import mockup from "../images/art2024/comics/the-wheat-field/smartmockups_wheatfield2.jpg";
-
-import cover from "../images/art2024/comics/the-wheat-field/01_MiriamSpalinski_TheWheatfield_cover.png";
-import p2 from "../images/art2024/comics/the-wheat-field/02_page_2.png";
-import p7 from "../images/art2024/comics/the-wheat-field/07_page_7.png";
-import p14 from "../images/art2024/comics/the-wheat-field/14_page_14.png";
-import p18 from "../images/art2024/comics/the-wheat-field/18_page_18.png";
-import p30 from "../images/art2024/comics/the-wheat-field/30_page_30.png";
-import p38 from "../images/art2024/comics/the-wheat-field/38_page_38.png";
+import mockup from "../../images/art2024/comics/the-wheat-field/mockup.jpg";
+import cover from "../../images/art2024/comics/the-wheat-field/cover.png";
+import p2 from "../../images/art2024/comics/the-wheat-field/02_page_2.png";
+import p7 from "../../images/art2024/comics/the-wheat-field/07_page_7.png";
+import p14 from "../../images/art2024/comics/the-wheat-field/14_page_14.png";
+import p18 from "../../images/art2024/comics/the-wheat-field/18_page_18.png";
+import p30 from "../../images/art2024/comics/the-wheat-field/30_page_30.png";
+import p38 from "../../images/art2024/comics/the-wheat-field/38_page_38.png";
 
 // const images = await Astro.glob(
 //   "../../images/art2024/comics/the-wheat-field/*.{jpg,jpeg,png,webp}"
@@ -40,7 +39,7 @@ import p38 from "../images/art2024/comics/the-wheat-field/38_page_38.png";
       </p>
     </div>
   </Mockup>
-  <LightBox im={cover} css="mt-12 max-w-[550px] h-auto mx-auto" />
+  <LightBox im={cover} css="mt-12 max-w-[550px] h-auto mx-auto" /> -->
   <div class="flex flex-col gap-4 mt-4">
     <!-- <LightBox im={p1} class="max-h-[550px]" /> -->
     <LightBox im={p2} class="max-h-[550px]" />
