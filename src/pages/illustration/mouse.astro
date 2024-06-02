@@ -11,7 +11,8 @@ const images = await Astro.glob(
 
 <MainLayout>
   <Heading> Mouse and Monster </Heading>
-  <div class="mt-8 mx-auto px-4 sm:px-8 lg:px-12 xl:px-24">
+  <!-- <div class="mt-8 mx-auto px-4 sm:px-8 lg:px-12 xl:px-24"> -->
+  <div class="pt-8">
     <Masonry images={images} />
   </div>
 </MainLayout>

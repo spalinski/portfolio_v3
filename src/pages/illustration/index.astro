@@ -23,8 +23,11 @@ const individual = await Astro.glob(
     ranging from collections of works to graphic novels and zines.
   </div>
   <Heading> SERIES </Heading>
-  <div
+  <!-- <div
     class="mx-auto px-4 sm:px-8 lg:px-12 xl:px-24 mt-8 mb-12 grid grid-cols-2 sm:grid-cols-3 gap-2 items-center justify-between"
+  > -->
+  <div
+    class="pt-8 grid grid-cols-2 sm:grid-cols-3 gap-2 items-center justify-between"
   >
     <a href="mother3">
       <Image src={m3} alt="main image" class="h-full w-full object-cover" />
@@ -45,8 +48,9 @@ const individual = await Astro.glob(
       <Image src={mouse} alt="main image" class="h-full w-full object-cover" />
     </a>
   </div>
-  <Heading> INDIVIDUAL PIECES </Heading>
-  <div class="mt-8 mx-auto px-4 sm:px-8 lg:px-12 xl:px-24">
+  <Heading class="pt-8"> INDIVIDUAL PIECES </Heading>
+  <!-- <div class="mt-8 mx-auto px-4 sm:px-8 lg:px-12 xl:px-24"> -->
+  <div class="mt-8">
     <Masonry images={individual} />
   </div>
 </MainLayout>

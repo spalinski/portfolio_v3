@@ -14,7 +14,8 @@ const images = await Astro.glob(
 <MainLayout>
   <Heading> Mother 3 Enemy SpriteDex </Heading>
   <!-- <div class="mt-2 flex items-center justify-center"> -->
-  <div class="mx-auto prose lg:prose-lg max-w-none px-8">
+  <!-- <div class="prose lg:prose-lg max-w-none px-8"> -->
+  <div class="prose lg:prose-lg max-w-none">
     <p>
       The following is an ongoing project that seeks to create spot
       illustrations and a light reimagining/redesign of the enemy characters in
@@ -42,7 +43,8 @@ const images = await Astro.glob(
   </div>
   <!-- </div> -->
 
-  <div class="mt-8 mx-8 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+  <!-- <div class="mt-8 mx-8 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4"> -->
+  <div class="mt-8 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
     {
       images.map((im, k) => (
         <>

@@ -13,7 +13,9 @@ const images = await Astro.glob(
 
 <MainLayout>
   <Heading>Lonely Landscapes</Heading>
-  <div class="mt-8 flex flex-col gap-2 mx-auto px-4 sm:px-8 lg:px-12 xl:px-24">
+  <!-- <div class="mt-8 flex flex-col gap-2 mx-auto px-4 sm:px-8 lg:px-12 xl:px-24"> -->
+  <!-- <div class="mt-8 flex flex-col gap-4 mx-auto px-4 sm:px-8 lg:px-12 xl:px-24"> -->
+  <div class="mt-8 flex flex-col gap-4">
     {
       images.map((im) => (
         <LightBox im={im.default} />
