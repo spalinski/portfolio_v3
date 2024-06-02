@@ -1,8 +1,8 @@
 ---
-const { im, css } = Astro.props;
 import { Image } from "astro:assets";
 
-const imcss = css + " object-contain";
+const { im, class: className } = Astro.props;
+const imcss = className + " object-contain";
 ---
 
 <!-- <light-box data-css={css}> -->
