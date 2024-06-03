@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import Heading from "../../components/Heading.astro";
+import Button from "../../components/Button.astro";
 
 import { Image } from "astro:assets";
 const sprites = await Astro.glob(
@@ -37,8 +38,8 @@ const images = await Astro.glob(
         more love for all the work and dedication that had been put into them. -->
     </p>
     <p>
-      Below are my spot illustrations; by hovering over an image you can see
-      what the original sprite!
+      Below are my spot illustrations; by hovering over an image you can see the
+      original sprite!
     </p>
   </div>
   <!-- </div> -->
@@ -77,4 +78,10 @@ const images = await Astro.glob(
       ))
     }
   </div>
+  <Button
+    href="/illustration/"
+    class="pt-12 flex justify-center md:justify-end"
+  >
+    Go to the Illustration Page!
+  </Button>
 </MainLayout>

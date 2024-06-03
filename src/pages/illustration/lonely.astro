@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import LightBox from "../../components/LightBox.astro";
+import Button from "../../components/Button.astro";
 // import Masonry from "../../components/Masonry.astro";
 
 import Heading from "../../components/Heading.astro";
@@ -23,4 +24,10 @@ const images = await Astro.glob(
       ))
     }
   </div>
+  <Button
+    href="/illustration/"
+    class="pt-12 flex justify-center md:justify-end"
+  >
+    Go to the Illustration Page!
+  </Button>
 </MainLayout>

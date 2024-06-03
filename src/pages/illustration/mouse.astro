@@ -2,7 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import Masonry from "../../components/Masonry.astro";
 import Heading from "../../components/Heading.astro";
-// import { Image } from "astro:assets";
+import Button from "../../components/Button.astro";
 
 const images = await Astro.glob(
   "../../images/art2024/comics/mouse-and-monster/*.{jpg,jpeg,png,webp}"
@@ -15,4 +15,10 @@ const images = await Astro.glob(
   <div class="pt-8">
     <Masonry images={images} />
   </div>
+  <Button
+    href="/illustration/"
+    class="pt-12 flex justify-center md:justify-end"
+  >
+    Go to the Illustration Page!
+  </Button>
 </MainLayout>

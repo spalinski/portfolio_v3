@@ -1,8 +1,10 @@
 ---
+import { Image } from "astro:assets";
+
 import MainLayout from "../../layouts/MainLayout.astro";
 import Masonry from "../../components/Masonry.astro";
 import Heading from "../../components/Heading.astro";
-import { Image } from "astro:assets";
+import Button from "../../components/Button.astro";
 
 import m3 from "../../images/art2024/mother3/M3Spritedex_cover2.png";
 import faces from "../../images/art2024/faces/animalfacescover.png";
@@ -49,8 +51,11 @@ const individual = await Astro.glob(
     </a>
   </div>
   <Heading class="pt-8"> INDIVIDUAL PIECES </Heading>
-  <!-- <div class="mt-8 mx-auto px-4 sm:px-8 lg:px-12 xl:px-24"> -->
+  <!-- <ggdiv class="mt-8 mx-auto px-4 sm:px-8 lg:px-12 xl:px-24"> -->
   <div class="mt-8">
     <Masonry images={individual} />
   </div>
+  <Button href="/about/" class="pt-12 flex justify-end">
+    Go to the About Page!
+  </Button>
 </MainLayout>

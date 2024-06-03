@@ -2,8 +2,9 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import BookPair from "../../components/BookPair.astro";
 import BookRight from "../../components/BookRight.astro";
+import Button from "../../components/Button.astro";
 // import BookLeft from "../../components/BookLeft.astro";
-// import { Image } from "astro:assets";
+
 import mockup1 from "../../images/art2024/covers/fronts/01-roaming_cover.png";
 import mockup2 from "../../images/art2024/covers/fronts/02-polishcats_cover.png";
 import mockup3 from "../../images/art2024/covers/fronts/03-thebigfish_cover.png";
@@ -41,4 +42,10 @@ import mockup5 from "../../images/art2024/covers/fronts/05-forest_cover.png";
     text="Tiny Things/Personal Project"
     link="tinythings"
   /> -->
+  <Button
+    href="/illustration/"
+    class="lg:pt-12 flex justify-center md:justify-end"
+  >
+    Go to the Illustration Page!
+  </Button>
 </MainLayout>

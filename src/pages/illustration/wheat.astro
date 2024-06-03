@@ -4,6 +4,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 // import Heading from "../../components/Heading.astro";
 import Mockup from "../../components/Mockup.astro";
 import LightBox from "../../components/LightBox.astro";
+import Button from "../../components/Button.astro";
 
 // import { Image } from "astro:assets";
 
@@ -50,4 +51,10 @@ import p38 from "../../images/art2024/comics/the-wheat-field/38_page_38.png";
     <LightBox im={p30} />
     <LightBox im={p38} />
   </div>
+  <Button
+    href="/illustration/"
+    class="pt-12 flex justify-center md:justify-end"
+  >
+    Go to the Illustration Page!
+  </Button>
 </MainLayout>
