@@ -1,22 +1,23 @@
 ---
-const { mockup1, text1, link1, mockup2, text2, link2 } = Astro.props;
+const { mockup1, spread1, text1, link1, mockup2, spread2, text2, link2 } =
+  Astro.props;
 // import BookRight from "./BookRight.astro";
 // import BookLeft from "./BookLeft.astro";
 import { Image } from "astro:assets";
+import Overlay from "./Overlay.astro";
 ---
 
 <div
   class="place-items-center grid lg:grid-cols-2 lg:auto-rows mx-auto xl:max-w-[1000px]"
 >
   <!-- row 1 -->
-  <div class="lg:row-span-2 lg:order-2">
-    <a href={link1}>
-      <Image
-        src={mockup1}
-        alt=""
-        class="shadow-2xl rounded-lg object-contain max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[400px]"
-      />
-    </a>
+  <div
+    class="shadow-2xl rounded-lg object-contain max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[400px] lg:row-span-2 lg:order-2"
+  >
+    <!-- <a href={link1}>
+      <Image src={mockup1} alt="" />
+    </a> -->
+    <Overlay im={mockup1} overlay={spread1} />
   </div>
 
   <div
@@ -31,7 +32,7 @@ import { Image } from "astro:assets";
   </div>
 
   <!-- second row -->
-  <div class="lg:row-span-2 lg:order-4 justify-self-center">
+  <!-- <div class="lg:row-span-2 lg:order-4 justify-self-center">
     <a href={link2} class="block">
       <Image
         src={mockup2}
@@ -39,6 +40,11 @@ import { Image } from "astro:assets";
         class="shadow-2xl rounded-lg max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[400px] object-contain"
       />
     </a>
+  </div> -->
+  <div
+    class="shadow-2xl rounded-lg object-contain max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[400px] lg:row-span-2 lg:order-2"
+  >
+    <Overlay im={mockup2} overlay={spread2} />
   </div>
 
   <div class="text-lg py-24 lg:order-6 flex flex-col justify-center">

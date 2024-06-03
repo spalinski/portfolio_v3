@@ -7,10 +7,15 @@ import Button from "../../components/Button.astro";
 // import BookLeft from "../../components/BookLeft.astro";
 
 import mockup1 from "../../images/art2024/covers/fronts/01-roaming_cover.png";
+import spread1 from "../../images/art2024/covers/01-roaming_cover.png";
 import mockup2 from "../../images/art2024/covers/fronts/02-polishcats_cover.png";
+import spread2 from "../../images/art2024/covers/02-polishcats_cover.png";
 import mockup3 from "../../images/art2024/covers/fronts/03-thebigfish_cover.png";
+import spread3 from "../../images/art2024/covers/03-thebigfish_cover.png";
 import mockup4 from "../../images/art2024/covers/fronts/04-tinythings_cover.png";
+import spread4 from "../../images/art2024/fronts/04-tinythings_cover.png";
 import mockup5 from "../../images/art2024/covers/fronts/05-forest_cover.png";
+import spread5 from "../../images/art2024/covers/05-forest_cover.png";
 ---
 
 <MainLayout>
@@ -18,18 +23,22 @@ import mockup5 from "../../images/art2024/covers/fronts/05-forest_cover.png";
 
   <BookPair
     mockup1={mockup1}
+    spread1={spread1}
     text1="Roaming/Personal Project"
     link1="roaming"
     mockup2={mockup3}
+    spread2={spread3}
     text2="The Big Fish/Personal Project"
     link2="bigfish"
   />
 
   <BookPair
     mockup1={mockup2}
+    spread1={spread2}
     text1="Polish Cats/Personal Project"
     link1="polishcats"
     mockup2={mockup5}
+    spread2={spread5}
     text2="Forest/Personal Project"
     link2="forest"
   />
