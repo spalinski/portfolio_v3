@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 // import Mockup from "../components/Mockup.astro";
-// import Button from "../components/Button.astro";
+import Button from "../components/Button.astro";
 // import Heading from "../components/Heading.astro";
 // import { Image } from "astro:assets";
 // import portrait from "../images/MiriamNYC_v2T.png";
@@ -12,16 +12,8 @@ import MainLayout from "../layouts/MainLayout.astro";
   <div
     class="pt-8 relative prose lg:prose-lg text-center mt-4 mx-auto max-w-3xl"
   >
-    <div class="absolute top-[-40px] right-0">
-      <div
-        class="bg-[url('/logo_cropped.png')] bg-no-repeat bg-contain bg-center p-6 flex flex-col items-center justify-center"
-      >
-        <a
-          href="/cv.pdf"
-          target="_blank"
-          class="block text-xl pt-8 hover:underline">resume</a
-        >.
-      </div>
+    <div class="absolute top-[-40px] right-[-22px]">
+      <Button href="/cv.pdf"> Resume </Button>
     </div>
 
     <h4>Hello!</h4>

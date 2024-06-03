@@ -2,7 +2,7 @@
 const { href } = Astro.props;
 ---
 
-<div class="mt-4">
+<!-- <div class="mt-4">
   <a href={href}>
     <button
       type="button"
@@ -11,4 +11,17 @@ const { href } = Astro.props;
       <slot />
     </button>
   </a>
+</div> -->
+<div
+  class="bg-[url('/logo_cropped.png')] bg-no-repeat bg-contain bg-center p-6 flex items-center justify-center"
+>
+  <div class="p-4 flex items-center justify-center">
+    <a
+      href={href}
+      target="_blank"
+      class="block no-underline hover:underline text-xl"
+    >
+      <slot />
+    </a>
+  </div>
 </div>
