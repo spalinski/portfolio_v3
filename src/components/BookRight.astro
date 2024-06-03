@@ -1,19 +1,27 @@
 ---
-const { mockup, text, link } = Astro.props;
-import { Image } from "astro:assets";
+// import { Image } from "astro:assets";
+
+import Overlay from "./Overlay.astro";
+
+const { mockup, spread, text, link } = Astro.props;
 ---
 
 <div
   class="place-items-center gap-0 grid lg:grid-cols-2 lg:auto-rows mx-auto xl:max-w-[1000px]"
 >
-  <div class="lg:row-span-2 lg:order-2">
-    <a href={link}>
+  <div
+    class="lg:row-span-2 lg:order-2 shadow-2xl rounded-lg object-contain max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[400px]"
+  >
+    <Overlay im={mockup} overlay={spread} />
+    <!--
+      <a href={link}>
       <Image
         src={mockup}
         alt=""
         class="shadow-2xl rounded-lg object-contain max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[400px]"
       />
     </a>
+   -->
   </div>
 
   <div

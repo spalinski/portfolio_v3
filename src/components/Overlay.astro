@@ -1,0 +1,82 @@
+---
+import { Image } from "astro:assets";
+
+const { im, overlay, class: className } = Astro.props;
+const imcss = className + " object-contain";
+
+// console.log(overlay);
+---
+
+<!-- <light-box data-css={css}> -->
+<light-box>
+  <div class="over" overlay={overlay.src}></div>
+  <Image src={im} alt="" class={imcss} />
+</light-box>
+
+<!-- Lightbox Container -->
+<div id="lightbox" class="fixed inset-0 z-10 hidden bg-black/85">
+  <div class="flex items-center justify-center">
+    <img
+      id="lightbox-image"
+      class="z-50 max-h-screen h-full w-full object-contain"
+      src=""
+      alt=""
+    />
+  </div>
+</div>
+
+<script>
+  class Overlay extends HTMLElement {
+    constructor() {
+      super();
+
+      //       this._over = null;
+
+      // const im = this.dataset.im;
+      // const css = this.dataset.css;
+      // console.log(image);
+      // console.log(css);
+
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightbox-image");
+
+      const image = this.querySelector("img");
+      const over = this.querySelector(".over");
+      const overlay = over.getAttribute("overlay");
+      //       console.log("%O", overlay);
+      //       console.dir(over);
+      console.dir(overlay);
+
+      //       console.log(image.src);
+
+      image.addEventListener("click", () => {
+        lightboxImage.src = overlay;
+        lightbox.classList.remove("hidden");
+      });
+
+      lightbox.addEventListener("click", () => {
+        lightbox.classList.add("hidden");
+      });
+    }
+
+    //     static get observedAttributes() {
+    //       return ["over"];
+    //     }
+
+    //     get over() {
+    //       return this._over;
+    //     }
+
+    //     set over(value) {
+    //       this._over = value;
+    //     }
+
+    //     attributeChangedCallback(name, oldValue, newValue) {
+    //       if (name === "over") {
+    //         this.over = newValue;
+    //       }
+    //     }
+  }
+
+  customElements.define("light-box", Overlay);
+</script>
