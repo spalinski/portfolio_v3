@@ -2,12 +2,12 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 // import Masonry from "../../components/Masonry.astro";
 import LightBox from "../../components/LightBox.astro";
-
+import Button from "../../components/Button.astro";
 import Heading from "../../components/Heading.astro";
+
 // import { Image } from "astro:assets";
 
 // const images = await Astro.glob("../../images/art2024/faces/*.gif");
-
 import otter from "../../images/art2024/faces/animalfaces_otter0001-0250.gif";
 import tiger from "../../images/art2024/faces/animalfaces_tiger0001-0250.gif";
 import lemur from "../../images/art2024/faces/animialfaces_lemur0001-0250.gif";
@@ -33,4 +33,10 @@ import lemur from "../../images/art2024/faces/animialfaces_lemur0001-0250.gif";
       <LightBox im={lemur} />
     </div>
   </div>
+  <Button
+    href="/illustration/"
+    class="pt-12 flex justify-center md:justify-end"
+  >
+    Go to Illustration
+  </Button>
 </MainLayout>
