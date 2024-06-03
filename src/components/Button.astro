@@ -1,5 +1,5 @@
 ---
-const { href, class: className } = Astro.props;
+const { href, external, class: className } = Astro.props;
 ---
 
 <div class={className}>
@@ -9,11 +9,13 @@ const { href, class: className } = Astro.props;
     <div class="p-4 flex items-center justify-center">
       <a
         href={href}
-        target="_blank"
-        class="block no-underline hover:underline text-lg"
+        target={external ? "_blank" : undefined}
+        class:list={["block", "no-underline", "hover:underline", "text-lg"]}
       >
         <slot />
       </a>
     </div>
   </div>
 </div>
+
+<!-- class="block no-underline hover:underline text-lg" -->
