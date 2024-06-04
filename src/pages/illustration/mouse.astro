@@ -3,6 +3,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import Masonry from "../../components/Masonry.astro";
 import Heading from "../../components/Heading.astro";
 import Button from "../../components/Button.astro";
+import LightBox from "../../components/LightBox.astro";
 
 const images = await Astro.glob(
   "../../images/art2024/comics/mouse-and-monster/*.{jpg,jpeg,png,webp}"
@@ -12,13 +13,21 @@ const images = await Astro.glob(
 <MainLayout>
   <Heading> Mouse and Monster </Heading>
   <!-- <div class="mt-8 mx-auto px-4 sm:px-8 lg:px-12 xl:px-24"> -->
-  <div class="pt-8">
+  <!-- <div class="pt-8">
     <Masonry images={images} />
+  </div> -->
+  <div
+    class="pt-8 grid grid-cols-2 md:grid-cols-4 gap-2 items-center justify-between"
+  >
+    {images.map((img) => <LightBox im={img.default} />)}
   </div>
   <Button
     href="/illustration/"
     class="pt-12 flex justify-center md:justify-end"
   >
-    Go to Illustration
+    <div class="text-center">
+      <p>Go to</p>
+      Illustration
+    </div>
   </Button>
 </MainLayout>
