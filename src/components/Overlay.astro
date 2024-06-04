@@ -6,8 +6,8 @@ const imcss = className + " object-contain";
 ---
 
 <light-box>
-  <div class="over" overlay={overlay.src}></div>
   <Image src={im} alt="" class={imcss} />
+  <Image src={overlay} alt="" class="hidden" />
 </light-box>
 
 <!-- Lightbox Container -->
@@ -30,12 +30,13 @@ const imcss = className + " object-contain";
       const lightbox = document.getElementById("lightbox");
       const lightboxImage = document.getElementById("lightbox-image");
 
-      const image = this.querySelector("img");
-      const over = this.querySelector(".over");
-      const overlay = over.getAttribute("overlay");
+      // the stuff below is local to the tag!
+      const images = this.querySelectorAll("img");
+      const image = images[0];
+      const overlayImage = images[1];
 
       image.addEventListener("click", () => {
-        lightboxImage.src = overlay;
+        lightboxImage.src = overlayImage.src;
         lightbox.classList.remove("hidden");
       });
 
