@@ -28,6 +28,7 @@ export default {
         msky: "#DFECFF",
         mred: "#DD466F",
         msun: "#FDFAEF",
+        lbox: "#020927",
       },
     },
   },

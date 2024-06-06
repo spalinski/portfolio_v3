@@ -11,7 +11,7 @@ const imcss = className + " object-contain";
 </light-box>
 
 <!-- Lightbox Container -->
-<div id="lightbox" class="fixed inset-0 z-10 hidden bg-black/85">
+<div id="lightbox" class="fixed inset-0 z-10 hidden bg-lbox/85">
   <div class="flex items-center justify-center">
     <img
       id="lightbox-image"
@@ -26,11 +26,6 @@ const imcss = className + " object-contain";
   class LightBox extends HTMLElement {
     constructor() {
       super();
-
-      // const im = this.dataset.im;
-      // const css = this.dataset.css;
-      // console.log(image);
-      // console.log(css);
 
       const lightbox = document.getElementById("lightbox");
       const lightboxImage = document.getElementById("lightbox-image");
