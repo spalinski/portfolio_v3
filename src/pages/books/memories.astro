@@ -1,0 +1,11 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import BookSpread from "../../components/BookSpread.astro";
+// import { Image } from "astro:assets";
+import book from "../../images/art2024/covers/jung_spread.png";
+---
+
+<MainLayout>
+  <!-- <Image src={book} alt="book image" class="mx-auto w-11/12 h-auto" /> -->
+  <BookSpread book={book} />
+</MainLayout>
