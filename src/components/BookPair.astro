@@ -1,22 +1,12 @@
 ---
-const {
-  mockup1,
-  spread1,
-  text1,
-  author1,
-  description1,
-  mockup2,
-  spread2,
-  text2,
-  author2,
-  description2,
-} = Astro.props;
+const { book1, book2 } = Astro.props;
 // import BookRight from "./BookRight.astro";
 // import BookLeft from "./BookLeft.astro";
-import { Image } from "astro:assets";
+// import { Image } from "astro:assets";
 import Overlay from "./Overlay.astro";
 ---
 
+<!-- <pre>{JSON.stringify(bo1, null, 2)}</pre><p>Author: {bo1.author}</p> -->
 <div
   class="place-items-center grid lg:grid-cols-2 lg:auto-rows mx-auto xl:max-w-[1000px]"
 >
@@ -27,17 +17,18 @@ import Overlay from "./Overlay.astro";
     <!-- <a href={link1}>
       <Image src={mockup1} alt="" />
     </a> -->
-    <Overlay im={mockup1} overlay={spread1} />
+    <!-- <Overlay im={mockup1} overlay={spread1} /> -->
+    <Overlay im={book1.mockup} overlay={book1.spread} />
   </div>
 
   <div
     class="text-lg py-24 lg:order-1 flex flex-col items-center justify-center"
   >
     <p>
-      {author1}
+      {book1.author}
       <span class="italic">
-        {text1}
-      </span>/ {description1}
+        {book1.title}
+      </span>/ {book1.description}
     </p>
     <!-- <a href={link1} class="block pt-1 hover:underline"> See full spread </a> -->
     Click cover to see the full spread
@@ -47,31 +38,19 @@ import Overlay from "./Overlay.astro";
     </span>
   </div>
 
-  <!-- second row -->
-  <!-- <div class="lg:row-span-2 lg:order-4 justify-self-center">
-    <a href={link2} class="block">
-      <Image
-        src={mockup2}
-        alt=""
-        class="shadow-2xl rounded-lg max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[400px] object-contain"
-      />
-    </a>
-  </div> -->
   <div
     class="shadow-2xl rounded-lg object-contain max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[400px] lg:row-span-2 lg:order-2"
   >
-    <Overlay im={mockup2} overlay={spread2} />
+    <Overlay im={book2.mockup} overlay={book2.spread} />
   </div>
 
   <div class="text-lg py-24 lg:order-6 flex flex-col justify-center">
     <p>
-      {author2}
+      {book2.author}
       <span class="italic">
-        {text2}
-      </span>/ {description2}
+        {book2.title}
+      </span>/ {book2.description}
     </p>
-    <!-- <p>{text2}</p> -->
-    <!-- <a href={link2} class="block pt-1 hover:underline"> See full spread </a> -->
     Click cover to see the full spread
     <!-- <span class="material-symbols-outlined"> arrow_back </span> -->
     <span class="hidden lg:block material-symbols-outlined">

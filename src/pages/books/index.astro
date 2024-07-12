@@ -1,11 +1,8 @@
 ---
-// TODO: define books as objects
-
 import MainLayout from "../../layouts/MainLayout.astro";
 import BookPair from "../../components/BookPair.astro";
 import BookRight from "../../components/BookRight.astro";
 import Button from "../../components/Button.astro";
-// import Overlay from "../../components/Overlay.astro";
 // import BookLeft from "../../components/BookLeft.astro";
 
 import mockup1 from "../../images/art2024/covers/fronts/01-roaming_cover.png";
@@ -25,50 +22,60 @@ import spread5 from "../../images/art2024/covers/05-forest_cover.png";
 
 import mockup6 from "../../images/art2024/covers/fronts/jung_cover.png";
 import spread6 from "../../images/art2024/covers/jung_spread.png";
+
+const book_jung = {
+  author: "C.G. Jung",
+  title: "Memories, Dreams, Reflections",
+  mockup: mockup6,
+  spread: spread6,
+  description: "Personal Project",
+};
+
+const book_fish = {
+  author: "",
+  title: "The Big Fish",
+  mockup: mockup3,
+  spread: spread3,
+  description: "Personal Project",
+};
+
+const book_tiny = {
+  author: "",
+  title: "Tiny Things",
+  mockup: mockup4,
+  spread: spread4,
+  description: "Personal Project",
+};
+
+const book_forest = {
+  author: "",
+  title: "Forest",
+  mockup: mockup5,
+  spread: spread5,
+  description: "Personal Project",
+};
+
+const book_cats = {
+  author: "",
+  title: "Polish Cats",
+  mockup: mockup2,
+  spread: spread2,
+  description: "Personal Project",
+};
+
+const book_roaming = {
+  author: "",
+  title: "Roaming",
+  mockup: mockup1,
+  spread: spread1,
+  description: "Personal Project",
+};
 ---
 
 <MainLayout>
-  <!-- <Overlay im={mockup1} overlay={mockup3} /> -->
-
-  <BookPair
-    mockup1={mockup6}
-    spread1={spread6}
-    text1="Memories, Dreams, Reflections"
-    author1="C.G. Jung"
-    description1="Personal Project"
-    link1="memories"
-    mockup2={mockup1}
-    spread2={spread1}
-    text2="Roaming"
-    description2="Personal Project"
-    link2="roaming"
-  />
-
-  <BookPair
-    mockup1={mockup3}
-    spread1={spread3}
-    text1="The Big Fish"
-    description1="Personal Project"
-    link1="thebigfish"
-    mockup2={mockup2}
-    spread2={spread2}
-    text2="Polish Cats"
-    description2="Personal Project"
-    link2="polishcats"
-  />
-
-  <BookPair
-    mockup1={mockup4}
-    spread1={spread4}
-    text1="Tiny Things"
-    description1="Personal Project"
-    link1="tinythings"
-    mockup2={mockup5}
-    spread2={spread5}
-    text2="Forest"
-    description2="Personal Project"
-    link2="forest"
-  />
+  <BookPair book1={book_jung} book2={book_roaming} />
+  <BookPair book1={book_fish} book2={book_cats} />
+  <BookPair book1={book_tiny} book2={book_forest} />
 
   <!--
   <BookRight
